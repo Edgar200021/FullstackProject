@@ -1,0 +1,79 @@
+.course
+	max-width: 62rem
+	width: 100%
+	display: flex
+	align-items: center
+	padding: .8rem 2.3rem .8rem .8rem
+	background-color: $color-secondary
+	border-radius: 14px
+	@include animation(rightToLeft, 2s, 2s)
+	&:nth-child(1)
+		@include animation(rightToLeft, 1s, 2s)
+	&:nth-child(2)
+		@include animation(rightToLeft, 1.2s, 2s)
+	&:nth-child(3)
+		@include animation(rightToLeft, 1.4s, 2s)
+	&:nth-child(4)
+		@include animation(rightToLeft, 1.6s, 2s)
+	&:nth-child(5)
+		@include animation(rightToLeft, 1.8s, 2s)
+	&:nth-child(6)
+		@include animation(rightToLeft, 2s, 2s)
+	&:not(:last-child)
+		margin-bottom: 1.6rem
+	&__img-box
+		max-width: 64px
+		width: 100%
+		display: flex
+		justify-content: center
+		align-items: center
+		margin-right: 2.4rem
+		height: 64px
+		background-color: $color-white
+		border-radius: 12px
+	&__info
+		max-width: 35rem
+		width: 100%
+		display: flex
+		justify-content: space-between
+		align-items: center
+		column-gap: 3.8rem
+		margin-right: 3.1rem
+		&-left
+			max-width: 17rem
+			width: 100%
+		&-right
+			display: flex
+			column-gap: 3.8rem
+			@include font(1.3rem,1.5rem,'Roboto')
+			p
+				position: relative
+				padding-left: 23px
+	&__author
+		@include font(1.3rem,1.5rem,'Roboto')
+	&__time
+		max-width: 8rem
+		width: 100%
+		span:nth-child(2)
+			margin-right: 5px
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-50%)
+			width: 16px
+			height: 16px
+			background: url('../../assets/icons/clock.svg')
+	&__rating
+		&::before
+			content: ''
+			position: absolute
+			left: 0
+			top: 50%
+			transform: translateY(-60%)
+			width: 16px
+			height: 16px
+			background: url('../../assets/icons/rating.svg')
+
+

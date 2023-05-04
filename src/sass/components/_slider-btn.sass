@@ -1,0 +1,22 @@
+.slider__btn
+	max-width: 9.6rem
+	width: 100%
+	button
+		display: inline-block
+		width: 40px
+		height: 40px
+		border: 2px solid $color-main
+		border-radius: 100px
+		background: transparent
+		cursor: pointer
+		@include font(2rem, 2rem, 'Roboto')
+		transition: transform .3s
+		&:not(:last-child)
+			margin-right: 1.6rem
+	&-prev
+		&:hover
+			transform: translateX(.5rem)
+	&-next
+		&:hover
+			transform: translateX(-.5rem)
+		

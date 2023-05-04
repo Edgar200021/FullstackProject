@@ -1,0 +1,19 @@
+.tabs
+	display: flex
+	column-gap: 3rem
+	&__btn
+		display: inline-block
+		max-width: 11rem
+		width: 100%
+		text-align: start
+		@include font(1.6rem, 2.6rem)
+		text-transform: capitalize
+		background: transparent
+		border: none
+		cursor: pointer
+		opacity: .3
+		transition: transform .3s
+		&:hover
+			transform: scale(.9)
+		&-active 
+			opacity: 1

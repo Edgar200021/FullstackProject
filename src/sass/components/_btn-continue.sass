@@ -1,0 +1,17 @@
+.btn__continue
+	display: inline-block
+	max-width: 12rem
+	width: 100%
+	padding: 1.2rem
+	text-align: center
+	@include font(1.3rem, 1.5rem, 'Roboto')
+	background-color: $color-main
+	color: $color-white
+	border-radius: 8px
+	transition: transform .3s
+	&:hover
+		transform: translateY(-.5rem)
+	&-bordered
+		border: 2px solid $color-main
+		background-color: transparent
+		color: $color-main

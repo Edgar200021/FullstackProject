@@ -1,0 +1,64 @@
+.content
+	display: flex
+	column-gap: 6.4rem
+	padding-left: 25rem
+
+.courses
+	position: relative
+	overflow: hidden
+	@include animation(bottomToTop, .6s, 2s)
+	&__tab-box
+		margin-bottom: 1rem
+	&__content
+		scrollbar-width: none
+		max-height: 42rem
+		display: none
+		overflow: hidden
+		overflow-y: auto
+		&::-webkit-scrollbar
+			width: 4px
+		&::-webkit-scrollbar-track
+			background-color: $color-secondary
+			border-radius: 10px
+		&::-webkit-scrollbar-thumb
+			background-color: $color-main
+			border-radius: 10px
+		&-active
+			display: block
+
+.user-interface
+	position: relative
+	display: flex
+	align-items: center
+	margin-bottom: 2.3rem
+	&__search
+		margin-right: 3.5rem
+	&__notification
+		margin-right: 1.8rem
+
+
+.statistics
+	margin-bottom: 5rem
+	&__title
+		margin-bottom: 1.6rem
+	&__action
+		display: flex
+		gap: 2.4rem
+		margin-bottom: 3rem
+		&-btn
+			background: none
+			cursor: pointer
+			border: none
+			opacity: .3
+			@include font(1.6rem,2.6rem)
+			transition: transform .3s
+			&:hover
+				transform: scale(1.1)
+			&--active
+				opacity: 1
+	&__select
+		margin-left: auto
+
+
+
+			

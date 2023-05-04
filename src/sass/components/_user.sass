@@ -1,0 +1,21 @@
+.user
+	max-width: 5.5rem
+	width: 100%
+	display: flex
+	align-items: center
+	column-gap: 1.5rem
+	&__btn
+		position: relative
+		display: inline-block 
+		width: 100%
+		border: none
+		background: none
+		cursor: pointer
+		&::after
+			content: ''
+			position: absolute
+			top: 50%
+			right: 50%
+			width: 10px
+			height: 6px
+			background: url('../../assets/icons/arrow-down.svg') center/cover no-repeat

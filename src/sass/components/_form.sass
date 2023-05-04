@@ -1,0 +1,112 @@
+.form
+	position: relative
+	z-index: 2
+	min-height: 41rem
+	min-width: 100%
+	background-color: $color-white
+	padding: 0 2.2rem
+	padding-bottom: 4rem
+	border-radius: 12px
+	box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25)
+	transition: all .5s ease
+	perspective:1500px
+	&__social
+		position: absolute
+		left: 50%
+		top: -4rem
+		transform: translateX(-50%)
+		max-width: 38rem
+		width: 100%
+		padding: 3rem 3rem 4.6rem 3rem
+		background-color: $color-main
+		text-align: center
+		border-radius: 8px
+		a
+			display: inline-block
+			transition: all .3s
+			&:hover
+				transform: scale(1.4)
+		&-box *:not(:last-child)
+			margin-right: 4.7rem
+	&__logo
+		margin-bottom: 3rem
+	&__content
+		display: flex
+		flex-direction: column
+		row-gap: 1.6rem
+		padding-top: 16rem
+		margin-bottom: 3rem
+	&__input
+		padding: 1.1rem 1.9rem
+		outline: none
+		border: 1px solid #C7CCD0
+		border-radius: 8px
+		@include font(1.4rem, 140%, 'Roboto')
+		transition: outline .2s ease-in-out
+		&:focus
+			outline: 1.5px solid #F45B5B
+	&__toggle
+		display: flex
+		column-gap: 10px
+		align-items: center
+		cursor: pointer
+		&-box
+			position: relative
+			width: 30px
+			height: 10px
+			background-color: #C7CCD0
+			border-radius: 7.5px
+			transition: background-color .3s ease-in
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 0
+				transform: translateY(-50%)
+				width: 20px
+				height: 20px
+				border: 1px solid #C7CCD0
+				border-radius: 100px
+				background-color: $color-white
+				box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.25)
+				transition: left .3s ease-in
+			&--active
+				background-color:#F45B5B
+			&--active::before
+				left: 50%
+		&-text
+			color: #7B809A
+			@include font(1.4rem, 140%, 'Roboto')
+	&__button
+		margin-top: auto
+	&__bottom
+		display: flex
+		justify-content: center
+		@include font (1.4rem, 140%,'Roboto')
+		column-gap: 1rem
+		color: #7B809A
+		&-link	
+			display: inline-block
+			color:#F45B5B
+			transition: transform .3s ease-in
+			&:hover
+				transform: scale(1.2)
+			
+	
+.move-to-left
+	transform: translateX(-100%)
+
+.move-to-right
+	transform: translateX(-100%)
+
+
+.show-password
+	display: inline-block
+	position: absolute
+	top: 50%
+	right: 10px
+	transform: translateY(-50%)
+	width: 24px
+	height: 24px
+	cursor: pointer
+	transition: transform .2s ease
